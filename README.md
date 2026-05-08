@@ -25,17 +25,25 @@ Single Docker container serving everything on port 8000:
 
 ## Quick Start
 
+Prerequisites: Docker, plus **Node 20+** on the host (the start scripts build
+the Next.js static export locally because `npm ci` inside Docker Desktop is
+unreliably slow).
+
 ```bash
 # Clone and configure
 cp .env.example .env
 # Add your OPENROUTER_API_KEY to .env
 
-# Run with Docker
-docker build -t finally .
-docker run -v finally-data:/app/db -p 8000:8000 --env-file .env finally
+# Build frontend, build image, start container — all in one
+./scripts/start_mac.sh                 # macOS / Linux
+.\scripts\start_windows.ps1            # Windows (PowerShell)
 
 # Open http://localhost:8000
 ```
+
+Stop with `./scripts/stop_mac.sh` or `.\scripts\stop_windows.ps1`. See
+`scripts/README.md` for flags (`--build` to force a rebuild, `--open` to
+launch the browser) and the manual `docker build`/`docker run` equivalents.
 
 ## Environment Variables
 

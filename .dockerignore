@@ -1,0 +1,45 @@
+# Build artifacts and caches
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/.ruff_cache
+**/.mypy_cache
+**/.coverage
+**/coverage
+**/htmlcov
+
+# Node (frontend/out is INTENTIONALLY NOT ignored — Dockerfile copies the
+# prebuilt static export into the image)
+**/node_modules
+**/.next
+frontend/.vitest-cache
+frontend/tsconfig.tsbuildinfo
+
+# Python virtualenvs
+**/.venv
+**/venv
+
+# Local DB and runtime data (persist via Docker volume, not the image)
+db/finally.db
+db/*.db
+
+# Secrets and editor cruft
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+.github
+.vscode
+.idea
+**/.DS_Store
+
+# Tests, planning, and scripts not needed in the production image
+test/
+planning/
+scripts/
+README.md
+LICENSE
+Dockerfile
+docker-compose.yml
+.dockerignore

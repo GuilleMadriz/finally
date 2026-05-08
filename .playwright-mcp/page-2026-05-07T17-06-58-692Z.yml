@@ -1,0 +1,95 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: FinAlly
+      - generic [ref=e7]: AI Trading Workstation
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]: Total Value
+        - generic [ref=e11]: —
+      - generic [ref=e12]:
+        - generic [ref=e13]: Unrealized P/L
+        - generic [ref=e14]: —
+      - generic [ref=e15]:
+        - generic [ref=e16]: Cash
+        - generic [ref=e17]: —
+      - generic "SSE connecting" [ref=e18]:
+        - generic [ref=e21]: connecting
+  - generic [ref=e22]:
+    - complementary [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "Watchlist" [level=2] [ref=e26]
+          - generic [ref=e27]: "0"
+        - generic [ref=e28]:
+          - textbox "Add ticker" [ref=e29]
+          - button "Add" [disabled] [ref=e30]
+        - generic [ref=e31]:
+          - generic [ref=e32]: Symbol
+          - generic [ref=e33]: Trend
+          - generic [ref=e34]: Price
+          - generic [ref=e35]: Δ %
+        - generic [ref=e37]: No tickers yet.
+    - main [ref=e38]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "—" [level=2] [ref=e43]
+            - generic [ref=e44]: live · since open
+          - generic [ref=e45]:
+            - generic [ref=e46]: —
+            - generic [ref=e47]: —
+        - generic [ref=e48]:
+          - img "price chart" [ref=e49]
+          - generic: Select a ticker from the watchlist.
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - heading "Positions" [level=2] [ref=e53]
+          - generic [ref=e54]: "0"
+        - generic [ref=e55]:
+          - table [ref=e56]:
+            - rowgroup [ref=e57]:
+              - row "Symbol Qty Avg Cost Last Mkt Value Unrlz P/L % Δ" [ref=e58]:
+                - columnheader "Symbol" [ref=e59]
+                - columnheader "Qty" [ref=e60]
+                - columnheader "Avg Cost" [ref=e61]
+                - columnheader "Last" [ref=e62]
+                - columnheader "Mkt Value" [ref=e63]
+                - columnheader "Unrlz P/L" [ref=e64]
+                - columnheader "% Δ" [ref=e65]
+            - rowgroup
+          - generic [ref=e66]: No open positions yet. Use the trade bar below to start.
+      - generic [ref=e68]:
+        - generic [ref=e69]: Trade
+        - textbox "Ticker" [ref=e70]:
+          - /placeholder: TICKER
+        - textbox "Quantity" [ref=e71]:
+          - /placeholder: Qty
+        - button "Buy" [disabled] [ref=e72]
+        - button "Sell" [disabled] [ref=e73]
+        - generic [ref=e74]: Market order · instant fill
+    - complementary [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Allocation Heatmap" [level=2] [ref=e78]
+          - generic [ref=e79]: weighted by market value
+        - generic [ref=e81]: No allocation data yet.
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - heading "Total Value" [level=2] [ref=e84]
+          - generic [ref=e86]: —
+        - generic [ref=e87]:
+          - img "portfolio value chart" [ref=e88]
+          - generic: No history yet.
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - heading "FinAlly" [level=2] [ref=e93]
+            - generic [ref=e94]: AI copilot
+          - generic [ref=e95]: live
+        - paragraph [ref=e97]: Ask FinAlly about your portfolio, request analysis, or have it place a trade.
+        - generic [ref=e98]:
+          - textbox "Chat message" [ref=e99]:
+            - /placeholder: Ask FinAlly…
+          - button "Send" [disabled] [ref=e100]
+  - button "Hide chat" [ref=e101]: hide chat

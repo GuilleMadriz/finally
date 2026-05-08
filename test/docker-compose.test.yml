@@ -1,0 +1,37 @@
+name: finally-e2e
+
+services:
+  app:
+    image: finally:latest
+    environment:
+      LLM_MOCK: "true"
+      OPENROUTER_API_KEY: ""
+      MASSIVE_API_KEY: ""
+    tmpfs:
+      - /app/db
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=3).status==200 else 1)"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+      start_period: 5s
+
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.49.0-jammy
+    working_dir: /work
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      BASE_URL: http://app:8000
+      CI: "true"
+    volumes:
+      - .:/work
+      - playwright-node-modules:/work/node_modules
+      - playwright-results:/work/test-results
+    command: >
+      bash -lc "npm ci --no-audit --no-fund && npx playwright test"
+
+volumes:
+  playwright-node-modules:
+  playwright-results:

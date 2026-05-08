@@ -1,0 +1,14 @@
+{
+  "name": "finally-e2e",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.49.0",
+    "@types/node": "20.14.10",
+    "typescript": "5.5.4"
+  }
+}
